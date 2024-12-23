@@ -89,7 +89,11 @@ const props = defineProps({
   },
   contentStyle: {
     type: Object,
-    default: () => {},
+    default: () => ({
+      'overflow-y': 'auto', // 当内容溢出时显示滚动条
+      'max-height': '600px', // 设置最大高度，根据需要调整
+
+    }),
   },
   onOk: {
     type: Function,

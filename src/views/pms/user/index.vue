@@ -91,6 +91,35 @@
             multiple
           />
         </n-form-item>
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="昵称" path="nickname">
+          <n-input v-model:value="modalForm.nickname" placeholder="请输入昵称" />
+        </n-form-item>
+
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="性别" path="gender">
+          <n-select v-model:value="modalForm.gender" :options="genders" placeholder="请选择性别" />
+        </n-form-item>
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="地址" path="address">
+          <n-input v-model:value="modalForm.address" placeholder="请输入地址" />
+        </n-form-item>
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="邮箱" path="email">
+          <n-input v-model:value="modalForm.email" placeholder="请输入邮箱" />
+        </n-form-item>
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="头像" path="avatar">
+          <n-input v-model:value="modalForm.avatar" placeholder="请输入在线图片链接" />
+        </n-form-item>
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="头像" path="avatar">
+          <n-input v-model:value="modalForm.avatar" placeholder="请输入在线图片链接" />
+        </n-form-item>
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="头像" path="avatar">
+          <n-input v-model:value="modalForm.avatar" placeholder="请输入在线图片链接" />
+        </n-form-item>
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="头像" path="avatar">
+          <n-input v-model:value="modalForm.avatar" placeholder="请输入在线图片链接" />
+        </n-form-item>
+        <n-form-item v-if="['add', 'setRole'].includes(modalAction)" label="头像" path="avatar">
+          <n-input v-model:value="modalForm.avatar" placeholder="请输入在线图片链接" />
+        </n-form-item>
+
         <n-form-item v-if="modalAction === 'add'" label="状态" path="enable">
           <NSwitch v-model:value="modalForm.enable">
             <template #checked>
@@ -127,6 +156,7 @@ onMounted(() => {
 })
 
 const genders = [
+  { label: '保密', value: 0 },
   { label: '男', value: 1 },
   { label: '女', value: 2 },
 ]
